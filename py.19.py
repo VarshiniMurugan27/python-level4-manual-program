@@ -1,12 +1,16 @@
-print("REVERSE NUMBER PROGRAM")
-print("----------------------")
+print("FIBONACCI SERIES")
+print("----------------")
 
-num = int(input("Enter a number: "))
-reverse = 0
-original = num
-while num != 0:
-    digit = num % 10
-    reverse = reverse * 10 + digit
-    num = num // 10
+n = int(input("Enter the number of terms: "))
 
-print(f"The reverse of {original} is: {reverse}")
+a, b = 0, 1
+count = 0
+
+if n <= 0:
+    print("Please enter a positive integer.")
+else:
+    print("Fibonacci Series:")
+    while count < n:
+        print(a, end=" ")
+        a, b = b, a + b
+        count += 1
